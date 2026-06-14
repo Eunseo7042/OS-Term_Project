@@ -15,7 +15,7 @@ void *philosopher(void *arg)
 
     for(int i=0;i<3;i++)
     {
-        printf("Philosopher %d thinking\n", id);
+        printf("Philosopher %d waiting\n", id);
         sleep(1);
 
         int first = left < right ? left : right;
