@@ -13,7 +13,7 @@ void *philosopher(void *arg)
 
     for(int i=0;i<3;i++)
     {
-        printf("Philosopher %d is thinking\n", id);
+        printf("Philosopher %d is waiting\n", id);
         sleep(1);
 
         pthread_mutex_lock(&table_lock);
