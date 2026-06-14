@@ -21,8 +21,8 @@ void *reader(void *arg)
         sem_wait(&mutex);
         read_count++;
 
-        if(read_count == 1)
-            sem_wait(&wrt);
+        if(read_count == 1) //reader가 계속 들어옴
+            sem_wait(&wrt); //reader가 들어오는 동안 wirter는 기다림
 
         sem_post(&mutex);
 
