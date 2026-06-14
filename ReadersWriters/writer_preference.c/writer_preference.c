@@ -60,7 +60,7 @@ void *writer(void *arg)
         sem_wait(&wmutex);
         write_count++;
 
-        if(write_count == 1)
+        if(write_count == 1) //writer가 기다리면 reader 차단
             sem_wait(&readTry);
 
         sem_post(&wmutex);
